@@ -91,7 +91,7 @@ let  decrement=document.getElementById("minus");
     heart.disabled = false;
     submit.disabled = false;
     pause.innerText="pause";
-    i=0;
+    i=-1;
     timer=setInterval(function() {
       i++;
       counter.innerText=`${i}`;
