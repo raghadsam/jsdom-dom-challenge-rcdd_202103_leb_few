@@ -59,19 +59,24 @@ let  decrement=document.getElementById("minus");
   pause.addEventListener('click',()=>{
 
     if(timesClicked%2===0)
-    {clearInterval(timer);
-    decrement.disabled = true;
-    increment.disabled = true;
-    heart.disabled = true;
-    submit.disabled = true;
-    pause.innerText="resume";
-    timesClicked++;
-    console.log(`timesclicked = ${timesClicked} and i=${i}`);}
+    {
+      clearInterval(timer);
+
+      decrement.disabled = true;
+      increment.disabled = true;
+      heart.disabled = true;
+      submit.disabled = true;
+
+      pause.innerText="resume";
+
+      timesClicked++;
+
+      console.log(`timesclicked = ${timesClicked} and i=${i}`);}
     else {
-      timer=setInterval(function() {
+        timer=setInterval(function() {
         i++;
-      counter.innerText=`${i}`;
-    }, 1000);
+        counter.innerText=`${i}`;
+        }, 1000);
       decrement.disabled = false;
       increment.disabled = false;
       heart.disabled = false;
